@@ -2,7 +2,7 @@ package Pr8.BouncingBox;
 
 import java.applet.*;
 import java.awt.*;
-@SuppressWarnings("removal")
+
 public class BouncingBox extends Applet implements Runnable {
     private ColorableRect box;
     private int dx = 5, dy = 5;

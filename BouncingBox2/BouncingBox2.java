@@ -3,7 +3,7 @@ package BouncingBox2;
 import java.applet.*;
 import java.awt.*;
 import java.util.Random;
-@SuppressWarnings("removal")
+
 public class BouncingBox2 extends Applet implements Runnable {
     private Rectangle[] shapes = new Rectangle[30];
     private int[] dx = new int[30];
