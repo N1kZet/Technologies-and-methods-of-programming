@@ -3,7 +3,7 @@ package Pr7;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
->
+
 abstract class Car implements Serializable {
     protected String brand;
     protected int year;
