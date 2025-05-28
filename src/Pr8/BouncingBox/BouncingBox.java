@@ -1,4 +1,4 @@
-package Pr8.BouncingBox;
+package BouncingBox;
 
 import java.applet.*;
 import java.awt.*;
