@@ -25,23 +25,21 @@ class Automobile {
         this.buyerName = buyerName;
     }
 
-    // Convert object to CSV string
     public String toCsvString() {
         return String.format("%s,%d,%.2f,%s,%s,%s,%s",
                 brand, year, price, configuration, countryOfOrigin, saleDate, buyerName);
     }
 
-    // Create object from CSV string
-    public static Automobile fromCsvString(String line) {
+    public static Automobile fromTxtString(String line) {
         String[] parts = line.split(",");
         return new Automobile(
-                parts[0],                           // brand
-                Integer.parseInt(parts[1]),         // year
-                Double.parseDouble(parts[2]),       // price
-                parts[3],                           // configuration
-                parts[4],                           // countryOfOrigin
-                LocalDate.parse(parts[5]),          // saleDate
-                parts[6]                            // buyerName
+                parts[0],                           
+                Integer.parseInt(parts[1]),         
+                Double.parseDouble(parts[2]),       
+                parts[3],                           
+                parts[4],                           
+                LocalDate.parse(parts[5]),          
+                parts[6]                            
         );
     }
 
@@ -104,7 +102,7 @@ class CarSales {
             soldCars.clear();
             for (String line : lines) {
                 if (!line.trim().isEmpty()) {
-                    soldCars.add(Automobile.fromCsvString(line));
+                    soldCars.add(Automobile.fromTxtString(line));
                 }
             }
             System.out.println("Данные успешно загружены из " + FILE_NAME);
